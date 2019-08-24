@@ -10,7 +10,7 @@
 	<name>jt-parent</name>
 	<url>http://maven.apache.org</url>
 
-	 <!-- 集中定义依赖版本号 -->
+	<!-- 集中定义依赖版本号 -->
 	<properties>
 		<junit.version>4.10</junit.version>
 		<spring.version>4.1.3.RELEASE</spring.version>
@@ -37,6 +37,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.9.1</version>
+		</dependency>
 		<!-- 单元测试 -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -44,7 +49,7 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-	
+
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -61,8 +66,8 @@
 			<artifactId>spring-aspects</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
-		
+
+
 		<!-- Mybatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -80,7 +85,7 @@
 			<version>${mybatis.paginator.version}</version>
 		</dependency>
 
-		
+
 		<!-- MySql -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -138,7 +143,7 @@
 			<artifactId>httpmime</artifactId>
 			<version>4.3.1</version>
 		</dependency>
-		
+
 		<!-- 消息队列 -->
 		<dependency>
 			<groupId>com.rabbitmq</groupId>
@@ -146,9 +151,9 @@
 			<version>3.5.1</version>
 		</dependency>
 		<dependency>
-		       <groupId>org.springframework.amqp</groupId>
-		       <artifactId>spring-rabbit</artifactId>
-		       <version>1.4.0.RELEASE</version>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit</artifactId>
+			<version>1.4.0.RELEASE</version>
 		</dependency>
 
 		<!-- JSP相关 -->
@@ -183,7 +188,7 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>${commons-lang3.version}</version>
 		</dependency>
-		<!--说明:如果该jar包依赖报错,则1.修改组Id commons-io,2或者注释 采用自动依赖的方式  -->
+		<!--说明:如果该jar包依赖报错,则1.修改组Id commons-io,2或者注释 采用自动依赖的方式 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-io</artifactId>
@@ -204,13 +209,13 @@
 			<version>${jedis.version}</version>
 		</dependency>
 
-		<!--添加spring-datajar包  -->
+		<!--添加spring-datajar包 -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-redis</artifactId>
 			<version>1.4.1.RELEASE</version>
 		</dependency>
-		
+
 		<!-- 字符加密、解密 -->
 		<dependency>
 			<groupId>commons-codec</groupId>
@@ -226,5 +231,5 @@
 		</dependency>
 	</dependencies>
 
-	
+
 </project>

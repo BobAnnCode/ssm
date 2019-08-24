@@ -2,7 +2,6 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <artifactId>jt-jsoup</artifactId>
-  <packaging>war</packaging>
   <name>jt-jsoup Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <build>
@@ -20,4 +19,5 @@
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
   </dependencies>
+  <packaging>war</packaging>
 </project>

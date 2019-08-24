@@ -117,6 +117,7 @@ public class TestJSONP {
 	//实现课程数据入库
 	@Test
 	public void saveBook() throws IOException{
+		@SuppressWarnings("resource")
 		ApplicationContext context = 
 				new ClassPathXmlApplicationContext("/spring/applicationContext*.xml");
 		
