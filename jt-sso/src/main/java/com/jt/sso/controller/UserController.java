@@ -31,8 +31,8 @@ public class UserController {
 	//实现用户的校验
 	@RequestMapping("/check/{param}/{type}")
 	@ResponseBody
-	public MappingJacksonValue findCheckUser(@PathVariable String param,@PathVariable int type,
-			String callback){
+	public MappingJacksonValue findCheckUser(@PathVariable String param,@PathVariable int type,String callback){
+			
 		String cloumn = null;
 		switch (type) {
 			case 1:
@@ -44,11 +44,11 @@ public class UserController {
 		}
 		//select * from tb_user where username = param
 		//根据提供提供的参数查询数据
-		boolean flag = 
-				userService.findCheckUser(param ,cloumn);
+		boolean flag = userService.findCheckUser(param ,cloumn);
+				
 		//封装返回值信息
-		MappingJacksonValue jacksonValue = 
-		new MappingJacksonValue(SysResult.oK(flag));
+		MappingJacksonValue jacksonValue = new MappingJacksonValue(SysResult.oK(flag));
+		
 		//设置回调方法
 		jacksonValue.setJsonpFunction(callback);
 		return jacksonValue;
